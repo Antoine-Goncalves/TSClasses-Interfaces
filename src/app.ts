@@ -20,7 +20,11 @@ class Department {
   }
 }
 
-class ITDepartment extends Department {}
+class ITDepartment extends Department {
+  constructor(id: string) {
+    super(id, "IT");
+  }
+}
 
 const accounting = new Department("08", "Accounting");
 
