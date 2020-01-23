@@ -3,7 +3,7 @@ class Department {
   //   public name: string;
   protected employees: string[] = [];
 
-  constructor(private readonly id: string, public name: string) {
+  constructor(protected readonly id: string, public name: string) {
     // this.name = n;
   }
 
@@ -55,6 +55,10 @@ class AccountDepartment extends Department {
     this.lastReport = reports[0];
   }
 
+  describe() {
+    console.log("Acoounting Department ID: " + this.id);
+  }
+
   addEmployee(name: string) {
     if (name === "Antoine") {
       return;
@@ -91,11 +95,13 @@ accounting.mostRecentReport = "Test";
 
 accounting.addReports("Something wrong...");
 console.log(accounting.mostRecentReport);
-accounting.printReports();
+// accounting.printReports();
 
 accounting.addEmployee("Antoine");
 accounting.addEmployee("Kelly");
-accounting.printEmployeeInformation();
+// accounting.printEmployeeInformation();
+
+accounting.describe();
 
 // const itCopy = { name: "Antoine", describe: it.describe };
 
