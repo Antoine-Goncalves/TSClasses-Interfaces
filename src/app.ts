@@ -6,6 +6,8 @@ class Department {
     // this.name = n;
   }
 
+  static createEmployee(name: string) {}
+
   describe(this: Department) {
     console.log(`Department: (${this.id}) - ${this.name}`);
   }
