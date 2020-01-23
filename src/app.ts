@@ -25,7 +25,7 @@ abstract class Department {
 
 class ITDepartment extends Department {
   admins: string[];
-  constructor(id: string, admins: string[]) {
+  private constructor(id: string, admins: string[]) {
     super(id, "IT");
     this.admins = admins;
   }
