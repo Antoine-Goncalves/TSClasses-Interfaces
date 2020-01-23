@@ -25,7 +25,7 @@ abstract class Department {
 
 class ITDepartment extends Department {
   admins: string[];
-  private constructor(id: string, admins: string[]) {
+  constructor(id: string, admins: string[]) {
     super(id, "IT");
     this.admins = admins;
   }
@@ -52,7 +52,7 @@ class AccountDepartment extends Department {
     this.addReports(value);
   }
 
-  constructor(id: string, private reports: string[]) {
+  private constructor(id: string, private reports: string[]) {
     super(id, "Accounting");
     this.lastReport = reports[0];
   }
