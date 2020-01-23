@@ -20,6 +20,8 @@ class Department {
   }
 }
 
+class ITDepartment extends Department {}
+
 const accounting = new Department("08", "Accounting");
 
 accounting.addEmployee("Antoine");
