@@ -28,14 +28,35 @@ class ITDepartment extends Department {
   }
 }
 
-const accounting = new ITDepartment("08", ["Antoine"]);
+class AccountDepartment extends Department {
+  constructor(id: string, private reports: string[]) {
+    super(id, "Accounting");
+  }
 
-accounting.addEmployee("Antoine");
-accounting.addEmployee("Kelly");
+  addReports(text: string) {
+    this.reports.push(text);
+  }
 
-accounting.describe();
-accounting.printEmployeeInformation();
+  printReports() {
+    console.log(this.reports);
+  }
+}
 
-// const accountingCopy = { name: "Antoine", describe: accounting.describe };
+const it = new ITDepartment("08", ["Antoine"]);
 
-// accountingCopy.describe();
+it.addEmployee("Antoine");
+it.addEmployee("Kelly");
+
+it.describe();
+it.printEmployeeInformation();
+
+console.log(it);
+
+const accounting = new AccountDepartment("59", []);
+
+accounting.addReports("Something wrong...");
+accounting.printReports();
+
+// const itCopy = { name: "Antoine", describe: it.describe };
+
+// itCopy.describe();
