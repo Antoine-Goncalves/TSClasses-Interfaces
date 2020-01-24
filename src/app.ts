@@ -4,7 +4,17 @@ interface Greetable {
   greet(phrase: string): void;
 }
 
-class Person {}
+class Person implements Greetable {
+  name: string;
+
+  constructor(n: string) {
+    this.name = n;
+  }
+
+  greet() {
+    console.log(phrase + " " + this.name);
+  }
+}
 
 let user1: Greetable;
 
