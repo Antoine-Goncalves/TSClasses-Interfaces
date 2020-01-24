@@ -22,3 +22,5 @@ let user1: Greetable;
 user1 = new Person("Antoine");
 
 user1.greet("Hi there - I am");
+
+console.log(user1);
