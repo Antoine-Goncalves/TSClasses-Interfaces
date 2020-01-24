@@ -1,9 +1,9 @@
-interface Person {
+type Person = {
   name: string;
   age: number;
 
   greet(phrase: string): void;
-}
+};
 
 let user1: Person;
 
